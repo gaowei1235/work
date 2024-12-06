@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卷积神经网络学习任务</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>卷积神经网络学习任务</h1>
+
+        <!-- 任务1：认识图片流程 -->
+        <div id="task-1" class="task">
+            <h2>任务一：认识图片流程</h2>
+            <p>你是一个“数据小侦探”，你的任务是帮助计算机完成“图片→数据→特征→学习”的流程。</p>
+            <p>首先，计算机识别图片的第一步是什么？</p>
+            <div id="options-1" class="options">
+                <button class="option" data-answer="data">图片转换为数据</button>
+                <button class="option" data-answer="feature">提取图片特征</button>
+                <button class="option" data-answer="learn">学习图像特征</button>
+            </div>
+            <div id="feedback-1" class="feedback"></div>
+            <button id="next-btn-1" class="next-btn" style="display: none;">下一步</button>
+        </div>
+
+        <!-- 任务2：探索RGB通道的秘密 -->
+        <div id="task-2" class="task" style="display:none;">
+            <h2>任务二：探索RGB通道的秘密</h2>
+            <p>为什么卷积网络的输入通道是3？请回顾之前讲解的“图片转换为RGB三通道”内容，选择正确答案。</p>
+            <div id="options-2" class="options">
+                <button class="option" data-answer="3">因为图像是彩色的，RGB三通道可以表示颜色信息。</button>
+                <button class="option" data-answer="1">因为图像只有一个颜色通道。</button>
+                <button class="option" data-answer="4">因为图像包含四种颜色通道。</button>
+            </div>
+            <div id="feedback-2" class="feedback"></div>
+            <button id="next-btn-2" class="next-btn" style="display: none;">下一步</button>
+        </div>
+
+        <!-- 任务3：展平操作测试 -->
+        <div id="task-3" class="task" style="display:none;">
+            <h2>任务三：展平操作测试</h2>
+            <p>请解释为什么要进行展平操作。</p>
+            <div id="options-3" class="options">
+                <button class="option" data-answer="flatten">展平操作将多维特征图转为一维输入，便于进入全连接层。</button>
+                <button class="option" data-answer="noFlatten">展平操作是多余的，可以跳过。</button>
+            </div>
+            <div id="feedback-3" class="feedback"></div>
+            <button id="next-btn-3" class="next-btn" style="display: none;">下一步</button>
+        </div>
+
+        <!-- 任务4：最大池化练习 -->
+        <div id="task-4" class="task" style="display:none;">
+            <h2>任务四：最大池化练习</h2>
+            <p>请选择每个区域的最大值，并记录答案。</p>
+            <div id="options-4" class="options">
+                <button class="option" data-answer="maxpool">最大池化成功保留了关键特征，帮助模型进一步优化。</button>
+                <button class="option" data-answer="wrong">选择错误，池化图中最大值未能保留。</button>
+            </div>
+            <div id="feedback-4" class="feedback"></div>
+            <button id="next-btn-4" class="next-btn" style="display: none;">完成任务</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
